@@ -1,0 +1,213 @@
+/* Page */
+
+.seller_container {
+  min-height: 100vh;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.seller_content {
+  width: 100%;
+  padding: 40px 60px;
+  border-top: 1px solid #e5e7eb;
+}
+
+
+.properties_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add_button {
+  background: #f5b64c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add_button:hover {
+  opacity: 0.9;
+}
+
+/* Property Cards */
+
+.property_card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.property_card p {
+  margin: 4px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.tag {
+  background: #ecfeff;
+  color: #0369a1;
+}
+
+.remove_btn {
+  background: rgb(220, 71, 71);
+  color: white;
+  cursor: pointer;
+}
+
+.tag, .remove_btn {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: none;
+}
+
+.remove_btn:hover {
+  background: red;
+}
+
+
+
+/* Empty text */
+
+.empty {
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* Inquiries */
+
+.inquiries {
+  margin-top: 40px;
+}
+
+/* Modal Overlay */
+
+.modal_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+/* Modal */
+
+.modal {
+  width: 520px;
+  max-height: 85vh;
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Modal Header */
+
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal_header span {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Form */
+
+.modal_form label {
+  font-size: 14px;
+  margin-top: 12px;
+  display: block;
+}
+
+.modal_form input,
+.modal_form textarea,
+.modal_form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-top: 6px;
+  outline: none;
+}
+
+.modal_form input:focus,
+.modal_form textarea:focus,
+.modal_form select:focus {
+  border: 2px solid #f5b64c;
+}
+
+/* Grid layouts */
+
+.two_col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.three_col {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Submit */
+
+.submit_btn {
+  margin-top: 20px;
+  width: 100%;
+  background: #f5b64c;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 25px 0;
+  color: #6b7280;
+  font-size: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+

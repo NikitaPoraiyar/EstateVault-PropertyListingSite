@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar_container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar_logo {
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.navbar_links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* NORMAL NAV ITEMS (Browse / Login) */
+
+.nav_item {
+  text-decoration: none;
+  color: #111;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.nav_item:hover {
+  background: #f3f4f6;
+}
+
+/* SIGNUP BUTTON */
+
+.signup_button {
+  background: #f5b64c;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* DASHBOARD */
+
+.dashboard_link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #111;
+}
+
+.dashboard_link:hover {
+  background: #f3f4f6;
+}
+
+/* ROLE TEXT */
+
+.role {
+  color: #9ca3af;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+/* LOGOUT BUTTON */
+
+.logout_btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout_btn:hover {
+  background: #f9fafb;
+}
