@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "../styles/propertyCard.module.css";
+import styles from "../styles/propertycard.module.css";
 import image from "../assets/villaimg_dummy.jpg";
 import { useAuth } from "../context/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
