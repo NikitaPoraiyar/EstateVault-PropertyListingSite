@@ -23,7 +23,6 @@ const SellerDashboard = () => {
     type: "",
   });
 
-  // FETCH SELLER PROPERTIES
   useEffect(() => {
     fetch("http://localhost:5000/api/properties")
       .then((res) => res.json())
@@ -42,22 +41,17 @@ const SellerDashboard = () => {
   }, [user]);
 
 
-  // SUBMIT PROPERTY
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const formData = new FormData();
 
-      // Add all form fields
       Object.keys(form).forEach(key => {
         formData.append(key, form[key]);
       });
 
-      // Seller email
       formData.append("sellerId", user.email);
-
-      // Image file
       formData.append("image", image);
 
       await fetch("http://localhost:5000/api/properties", {

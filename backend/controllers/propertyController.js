@@ -10,7 +10,7 @@ export const upload = multer({
   storage: multer.memoryStorage(),
 });
 
-// CREATE PROPERTY
+
 export const createProperty = async (req, res) => {
   try {
     const {
@@ -30,7 +30,7 @@ export const createProperty = async (req, res) => {
 
     let imageUrl = "";
 
-    // Upload image to S3 if exists
+
     if (file) {
       const fileName = `${uuidv4()}-${file.originalname}`;
 
@@ -74,7 +74,7 @@ export const createProperty = async (req, res) => {
   }
 };
 
-// GET ALL PROPERTIES
+
 export const getProperties = async (req, res) => {
   try {
     const snapshot = await db.collection("properties").get();
@@ -106,7 +106,7 @@ export const getSimilarProperties = async (req, res) => {
 
     let propertiesMap = {};
 
-    // Firestore IN query batching
+
     for (let i = 0; i < similarIds.length; i += 10) {
       const batch = similarIds.slice(i, i + 10);
 
@@ -123,7 +123,7 @@ export const getSimilarProperties = async (req, res) => {
       });
     }
 
-    // 🔥 Reorder according to similarity.json
+
     const orderedProperties = similarIds
       .map(pid => propertiesMap[pid])
       .filter(Boolean);
@@ -136,7 +136,7 @@ export const getSimilarProperties = async (req, res) => {
   }
 };
 
-// DELETE PROPERTY
+
 export const deleteProperty = async (req, res) => {
   try {
     const { id } = req.params;

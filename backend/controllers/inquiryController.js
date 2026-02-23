@@ -1,6 +1,5 @@
 import { db } from "../firebase.js";
 
-// CREATE
 export const createInquiry = async (req, res) => {
   try {
     await db.collection("inquiries").add({
@@ -14,7 +13,7 @@ export const createInquiry = async (req, res) => {
   }
 };
 
-// GET FOR BUYER
+
 export const getBuyerInquiries = async (req, res) => {
   try {
     const snapshot = await db
@@ -30,7 +29,7 @@ export const getBuyerInquiries = async (req, res) => {
   }
 };
 
-// GET FOR SELLER
+
 export const getSellerInquiries = async (req, res) => {
   try {
     const snapshot = await db

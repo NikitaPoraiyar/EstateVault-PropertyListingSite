@@ -8,14 +8,14 @@ export const rateProperty = async (req, res) => {
             return res.status(400).json({ message: "Invalid rating" });
         }
 
-        // Check existing rating
+        
         const snapshot = await db
             .collection("ratings")
             .where("userId", "==", userId)
             .where("propertyId", "==", propertyId)
             .get();
 
-        // If exists → update
+
         if (!snapshot.empty) {
             const docId = snapshot.docs[0].id;
 
@@ -24,7 +24,7 @@ export const rateProperty = async (req, res) => {
             return res.json({ message: "Rating updated" });
         }
 
-        // Else → create new
+
         await db.collection("ratings").add({
         userId,
         propertyId,

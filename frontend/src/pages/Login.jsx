@@ -33,7 +33,7 @@ const Login = () => {
         return;
       }
 
-      // Save user in auth context
+
       login(data.email, data.role, data.name);
 
       navigate("/");

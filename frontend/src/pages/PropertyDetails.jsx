@@ -41,8 +41,8 @@ const PropertyDetails = () => {
   fetch(`http://localhost:5000/api/properties/similar/${id}`)
     .then(res => res.json())   
     .then(data => {
-      console.log(data);       // now this is actual array
-      setRecommend(data);      // store real data
+      console.log(data);       
+      setRecommend(data);     
     })
     .catch(err => console.error(err));
 }, [id]);

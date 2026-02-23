@@ -25,8 +25,6 @@
   gap: 18px;
 }
 
-/* NORMAL NAV ITEMS (Browse / Login) */
-
 .nav_item {
   text-decoration: none;
   color: #111;
@@ -39,7 +37,6 @@
   background: #f3f4f6;
 }
 
-/* SIGNUP BUTTON */
 
 .signup_button {
   background: #f5b64c;
@@ -50,7 +47,6 @@
   font-weight: 500;
 }
 
-/* DASHBOARD */
 
 .dashboard_link {
   display: flex;
@@ -66,7 +62,6 @@
   background: #f3f4f6;
 }
 
-/* ROLE TEXT */
 
 .role {
   color: #9ca3af;
@@ -74,7 +69,6 @@
   font-size: 14px;
 }
 
-/* LOGOUT BUTTON */
 
 .logout_btn {
   display: flex;
