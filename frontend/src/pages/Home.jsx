@@ -20,7 +20,7 @@ const Home = () => {
   const [showBuyerModal, setShowBuyerModal] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/properties")
+    fetch("https://estatevault-backend.onrender.com/api/properties")
       .then(res => res.json())
       .then(data => setFeatured(data))
       .catch(err => console.error(err));

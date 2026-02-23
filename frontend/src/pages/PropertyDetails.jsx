@@ -19,7 +19,7 @@ const PropertyDetails = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/properties")
+    fetch("https://estatevault-backend.onrender.com/api/properties")
       .then(res => res.json())
       .then(data => {
         const found = data.find(p => p.id === id);
@@ -28,7 +28,7 @@ const PropertyDetails = () => {
   }, [id]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/ratings/${id}`)
+    fetch(`https://estatevault-backend.onrender.com/api/ratings/${id}`)
       .then(res => res.json())
       .then(data => {
         setLikes(data.likes);
@@ -38,7 +38,7 @@ const PropertyDetails = () => {
 
   
   useEffect(() => {
-  fetch(`http://localhost:5000/api/properties/similar/${id}`)
+  fetch(`https://estatevault-backend.onrender.com/api/properties/similar/${id}`)
     .then(res => res.json())   
     .then(data => {
       console.log(data);       
@@ -52,7 +52,7 @@ const PropertyDetails = () => {
   const react = async (rating) => {
     if (!user) return alert("Login first");
 
-    await fetch("http://localhost:5000/api/ratings", {
+    await fetch("https://estatevault-backend.onrender.com/api/ratings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -62,7 +62,7 @@ const PropertyDetails = () => {
       })
     });
 
-    const res = await fetch(`http://localhost:5000/api/ratings/${id}`);
+    const res = await fetch(`https://estatevault-backend.onrender.com/api/ratings/${id}`);
     const data = await res.json();
 
     setLikes(data.likes);
@@ -72,7 +72,7 @@ const PropertyDetails = () => {
   const sendInquiry = async () => {
     if (!message) return alert("Enter inquiry message");
 
-    const res = await fetch("http://localhost:5000/api/inquiries", {
+    const res = await fetch("https://estatevault-backend.onrender.com/api/inquiries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

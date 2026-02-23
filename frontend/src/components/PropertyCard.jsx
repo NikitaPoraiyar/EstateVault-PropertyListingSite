@@ -15,7 +15,7 @@ const PropertyCard = ({ property }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/ratings/${property.id}`)
+    fetch(`https://estatevault-backend.onrender.com/api/ratings/${property.id}`)
       .then((res) => res.json())
       .then((data) => {
         setLikes(data.likes);
@@ -27,7 +27,7 @@ const PropertyCard = ({ property }) => {
 
     if (!user) return alert("Login first");
     setLoading(true);
-    await fetch("http://localhost:5000/api/ratings", {
+    await fetch("https://estatevault-backend.onrender.com/api/ratings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -36,7 +36,7 @@ const PropertyCard = ({ property }) => {
         rating,
       }),
     });
-    const res = await fetch(`http://localhost:5000/api/ratings/${property.id}`);
+    const res = await fetch(`https://estatevault-backend.onrender.com/api/ratings/${property.id}`);
     const data = await res.json();
 
     setLikes(data.likes);

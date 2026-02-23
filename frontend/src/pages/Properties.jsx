@@ -13,7 +13,7 @@ const Properties = () => {
   const [ type, setType ] = useState("All");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/properties")
+    fetch("https://estatevault-backend.onrender.com/api/properties")
       .then(res => res.json())
       .then(data => {
         setProperties(data);

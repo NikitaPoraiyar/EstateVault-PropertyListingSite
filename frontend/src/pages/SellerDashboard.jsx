@@ -24,7 +24,7 @@ const SellerDashboard = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/properties")
+    fetch("https://estatevault-backend.onrender.com/api/properties")
       .then((res) => res.json())
       .then((data) => {
         const mine = data.filter((p) => p.sellerId === user.email);
@@ -35,7 +35,7 @@ const SellerDashboard = () => {
   useEffect(() => {
     if (!user) return;
 
-    fetch(`http://localhost:5000/api/inquiries/seller/${user.email}`)
+    fetch(`https://estatevault-backend.onrender.com/api/inquiries/seller/${user.email}`)
       .then(res => res.json())
       .then(data => setInquiries(data));
   }, [user]);
@@ -54,7 +54,7 @@ const SellerDashboard = () => {
       formData.append("sellerId", user.email);
       formData.append("image", image);
 
-      await fetch("http://localhost:5000/api/properties", {
+      await fetch("https://estatevault-backend.onrender.com/api/properties", {
         method: "POST",
         body: formData,   
       });
@@ -74,7 +74,7 @@ const SellerDashboard = () => {
       setImage(null);
       setShowModal(false);
 
-      const res = await fetch("http://localhost:5000/api/properties");
+      const res = await fetch("https://estatevault-backend.onrender.com/api/properties");
       const data = await res.json();
       setProperties(data.filter((p) => p.sellerId === user.email));
 
@@ -88,7 +88,7 @@ const SellerDashboard = () => {
     if (!window.confirm("Delete this property?")) return;
 
     try {
-      await fetch(`http://localhost:5000/api/properties/${id}`, {
+      await fetch(`https://estatevault-backend.onrender.com/api/properties/${id}`, {
         method: "DELETE",
       });
 

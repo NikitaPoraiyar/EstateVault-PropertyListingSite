@@ -8,7 +8,7 @@ const BuyerDashboard = () => {
   const [inquiries, setInquiries] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/inquiries/buyer/${user.email}`)
+    fetch(`https://estatevault-backend.onrender.com/api/inquiries/buyer/${user.email}`)
       .then(res => res.json())
       .then(setInquiries);
   }, []);
